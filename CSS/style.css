@@ -1,0 +1,316 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 60px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+/* HEADER */
+header .container {
+    justify-content: space-between;
+}
+
+.col-5 {
+    width: 500px
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header ul {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+li {
+    float: left;
+    padding-left: 25px;
+}
+
+
+/* INICI */
+
+.slogan {
+    margin: 80px 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: 650;
+    color: #5b7bb3;
+}
+
+.spaced {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.trailer {
+    margin: 75px 0 130px;
+    height: auto;
+}
+
+/* PROJECTE */
+
+
+
+/* INSTAL·LACIÓ */
+
+.col-4 img,
+.col-4 h2,
+.col-4 p {
+    width: 92%;
+    display: flex;
+    margin-top: 26px;
+    border-width: 4px;
+    transition: transform .2s;
+}
+
+/* ESPAI ANÒNIM */
+.darkBG {
+    background-color: #232323;
+    color: white;
+}
+
+.darkBG a {
+    color: white;
+}
+
+.blueBtn {
+    margin: auto;
+    width: 200px;
+    text-align: center;
+    background-color: #5f80b9;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 28px;
+    border-radius: 15px;
+    border-style: none;
+}
+
+/* ESPAI ANÒNIM 2 */
+.posts {
+    margin-bottom: 100px;
+}
+
+.posts .col-4 p {
+    background-color: white;
+    color: black;
+    margin: 25px 15px;
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.plusBtn {
+    z-index: 3;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    position: fixed;
+}
+
+.postMaker {
+    position: fixed;
+    z-index: 4;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.postContent {
+    position: fixed;
+    width: 500px;
+    margin-bottom: 10px;
+    padding: 90px 30px 40px;
+    border-radius: 40px;
+    background-color: #5f80b9;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+.show {
+    display: flex;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 40px;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+}
+
+textarea {
+    font-size: 16px;
+    height: 200px;
+    width: 85%;
+    padding: 8px 16px;
+    border-radius: 18px;
+    border-style: none;
+
+}
+
+.postBtn {
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 18px;
+    border-style: none;
+}
+
+/* FOOTER */
+/* .footer {
+    text-align: center;
+    background-color: #3e3d43;
+    color: white;
+}
+
+.footer .container {
+    display: block;
+}
+
+.footer p {
+    text-align: center;
+    padding: 60px;
+}
+
+.footer a {
+    margin: 0px 15px;
+    color: white;
+}
+
+.copyright {
+    opacity: 0.7;
+}
+
+.fb,
+.twt,
+.ig,
+.yt {
+    transition: transform .2s;
+}
+
+.fb:hover {
+    color: #3b5998;
+    transform: scale(2);
+}
+
+.twt:hover {
+    color: #32ccfe;
+    transform: scale(2);
+}
+
+.ig:hover {
+    color: #bc2a8d;
+    transform: scale(2);
+}
+
+.yt:hover {
+    color: #ff0000;
+    transform: scale(2);
+} */
+
+
+/* MOBILE */
+@media screen and (max-width: 1200px) {
+    .col-4 {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header .container {
+        padding: 42px;
+    }
+
+    header .col-4 {
+        width: 80%;
+    }
+
+    .col-6,
+    .col-10 {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        text-align: justify;
+    }
+
+    header ul {
+        width: 400px;
+    }
+
+    .form {
+        margin-top: 50px;
+    }
+
+    .posts .col-4 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header .col-4 {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 9vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    p {
+        font-size: 3.5vw;
+    }
+
+    ul {
+        margin-left: -75px;
+    }
+
+    .gallery ul {
+        margin-left: -150px;
+    }
+
+    li {
+        font-size: 3.5vw;
+        padding: 2.5%;
+    }
+}
