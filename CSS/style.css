@@ -24,12 +24,28 @@ p {
 }
 
 /* HEADER */
+header {
+    margin-bottom: 80px;
+}
+
 header .container {
     justify-content: space-between;
 }
 
+header .col-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .col-4 img {
+    width: 100%;
+
+}
+
 .col-5 {
-    width: 500px
+    width: 500px;
 }
 
 ul {
@@ -55,7 +71,7 @@ li {
 /* INICI */
 
 .slogan {
-    margin: 80px 0;
+    margin-bottom: 80px;
     text-align: center;
     font-style: italic;
     font-weight: 650;
@@ -67,25 +83,97 @@ li {
     margin-bottom: 100px;
 }
 
+.videoContainer {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
 .trailer {
-    margin: 75px 0 130px;
-    height: auto;
+    position: absolute;
+    width: 100%;
+    height: 72.5%;
+    top: 0;
+    left: 0;
 }
 
 /* PROJECTE */
 
+.fotoEquip {
+    border-radius: 35px;
+    width: 80%;
+    margin: 40px auto;
+}
 
+.image-container {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    width: 30%;
+    margin: 1.5%;
+    border-radius: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(91, 123, 179, 0.8);
+    border-radius: 15px;
+}
+
+.image-container:hover .text-overlay {
+    opacity: 1;
+}
+
+.text-overlay h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+.text-overlay p {
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
 
 /* INSTAL·LACIÓ */
 
-.col-4 img,
-.col-4 h2,
-.col-4 p {
+.inst img {
+    border-radius: 20px;
+}
+
+.col-7 p {
+    padding: 70px 10px;
+}
+
+.inst .col-4 img,
+.inst .col-4 h2,
+.inst .col-4 p {
     width: 92%;
     display: flex;
     margin-top: 26px;
     border-width: 4px;
     transition: transform .2s;
+}
+
+.map {
+    margin: 40px auto 180px;
 }
 
 /* ESPAI ANÒNIM */
@@ -246,7 +334,7 @@ textarea {
 /* MOBILE */
 @media screen and (max-width: 1200px) {
     .col-4 {
-        width: 45%;
+        width: 50%;
     }
 }
 
@@ -255,10 +343,19 @@ textarea {
         padding: 42px;
     }
 
+    header .col-5 {
+        width: 100%;
+    }
+
     header .col-4 {
         width: 80%;
     }
 
+    .col-4 {
+        width: 50%;
+    }
+
+    .col-6,
     .col-6,
     .col-10 {
         width: 100%;
@@ -281,7 +378,20 @@ textarea {
 }
 
 @media screen and (max-width: 500px) {
+    header {
+        margin-bottom: 00px;
+    }
+
     header .col-4 {
+        width: 100%;
+    }
+
+    .equip .col-2 {
+        width: 0;
+    }
+
+    .col-4,
+    .col-7 {
         width: 100%;
     }
 
@@ -299,18 +409,15 @@ textarea {
 
     p {
         font-size: 3.5vw;
+        text-align: justify;
     }
 
     ul {
         margin-left: -75px;
     }
 
-    .gallery ul {
-        margin-left: -150px;
-    }
-
     li {
-        font-size: 3.5vw;
+        font-size: 2.85vw;
         padding: 2.5%;
     }
 }

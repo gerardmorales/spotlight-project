@@ -36,25 +36,45 @@ postBtn.addEventListener('click', function () {
     location.reload()
 })
 
-function getRandomItem(arr) {
+// function getRandomItem(arr) {
 
-    const randomIndex = Math.floor(Math.random() * arr.length);
+//     const randomIndex = Math.floor(Math.random() * arr.length);
 
-    const item = arr[randomIndex];
+//     const item = arr[randomIndex];
 
-    return item;
-};
+//     return item;
+// };
 
-const array = ['.col1', '.col2', '.col3'];
+// const array = ['.col1', '.col2', '.col3'];
 
-secrets.forEach(data => {
-    createElementPosts(data);
-})
+secrets.sort(() => Math.random() - 0.5);
 
-function createElementPosts(data) {
-    let p = document.createElement('p');
-    p.innerHTML = data.text;
-    document.querySelector(getRandomItem(array)).appendChild(p);
-    console.log('posted secret on board!')
+let offset = 0;
+secrets.forEach((data, index) => {
+    if ((index - offset) % 3 === 0) {
+        let p = document.createElement('p');
+        p.innerHTML = data.text;
+        document.querySelector('.col1').appendChild(p);
+        console.log('posted secret on board!')
+    }
+});
 
-}
+offset = 1;
+secrets.forEach((data, index) => {
+    if ((index - offset) % 3 === 0) {
+        let p = document.createElement('p');
+        p.innerHTML = data.text;
+        document.querySelector('.col2').appendChild(p);
+        console.log('posted secret on board!')
+    }
+});
+
+offset = 2;
+secrets.forEach((data, index) => {
+    if ((index - offset) % 3 === 0) {
+        let p = document.createElement('p');
+        p.innerHTML = data.text;
+        document.querySelector('.col3').appendChild(p);
+        console.log('posted secret on board!')
+    }
+});
