@@ -18,9 +18,14 @@ p {
 }
 
 .container {
-    width: 80%;
+    width: 72%;
     margin: auto;
     display: flex;
+}
+
+.coloredBG {
+    background-color: #5f80b9;
+    color: white;
 }
 
 /* HEADER */
@@ -170,6 +175,19 @@ li {
     margin-top: 26px;
     border-width: 4px;
     transition: transform .2s;
+}
+
+.inst .col-4 img {
+    margin-top: 60px;
+    border-style: ridge;
+    border-color: white;
+    border-width: 3px;
+}
+
+.mapText {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 700;
 }
 
 .map {

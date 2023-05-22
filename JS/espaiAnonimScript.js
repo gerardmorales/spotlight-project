@@ -36,17 +36,6 @@ postBtn.addEventListener('click', function () {
     location.reload()
 })
 
-// function getRandomItem(arr) {
-
-//     const randomIndex = Math.floor(Math.random() * arr.length);
-
-//     const item = arr[randomIndex];
-
-//     return item;
-// };
-
-// const array = ['.col1', '.col2', '.col3'];
-
 secrets.sort(() => Math.random() - 0.5);
 
 let offset = 0;
